@@ -1,0 +1,25 @@
+{
+  "name": "hamburgaler",
+  "version": "1.0.0",
+  "description": "Hamburger assignment",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roydavis99/HamBurgaler.git"
+  },
+  "author": "Roy Davis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roydavis99/HamBurgaler/issues"
+  },
+  "homepage": "https://github.com/roydavis99/HamBurgaler#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.16.0"
+  }
+}
