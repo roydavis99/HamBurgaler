@@ -1,7 +1,4 @@
-<li>
-	{{name}}
-
-	<button class="change-devoured" data-id="{{id}}" data-newdevoured="{{devoured}}">
-		{{#if devoured}}DEVOURED ME!!!!!!!{{else}}Resupply{{/if}}
+<li class="list-group-item text-dark bg-light change-devoured" data-id="{{id}}" data-newdevoured="{{devoured}}">
+	{{name}}	<span class="text-danger font-weight-bold">	{{#if devoured}} - DEVOURED ME!!{{else}} - Order Up!{{/if}}</span>
 	</button>
 </li>

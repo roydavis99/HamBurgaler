@@ -17,3 +17,40 @@ li {
 .form-group {
   margin-bottom: 5px;
 }
+
+body{
+  background-color: black;
+}
+
+div{
+  background-color: none;
+}
+
+#burger{
+  background-image: url("../img/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+h1{
+  font-size: 8em;
+}
+.font-rock{
+  font-family: 'Rock Salt', cursive;
+
+}
+
+.text-black{
+  color:black;
+}
+.change-devoured:hover{
+  cursor: default;
+}
+.col-lg-5, .burger-add{
+  border-style: solid;
+  border-width: 4px;
+  border-color: black;
+}
+
+.bg-orange{
+  background-color: orange;
+}

@@ -15,7 +15,7 @@ $(function() {
     }).then(
       function() {
         console.log("changed devoured to", newDevoured);
-        // Reload the page to get the updated list
+        // Reload the page to get the updated list 
         location.reload();
       }
     );
@@ -24,14 +24,14 @@ $(function() {
   $(".create-form").on("submit", function(event) {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
-
-    var newBurger = {
+    console.log("here");
+    var newburger = {
       name: $("#bu").val().trim(),
       devoured: $("[name=devoured]:checked").val().trim()
     };
-
+    console.log(newburger);
     // Send the POST request.
-    $.ajax("/api/buregers", {
+    $.ajax("/api/burgers", {
       type: "POST",
       data: newburger
     }).then(

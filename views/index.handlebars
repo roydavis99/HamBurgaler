@@ -1,38 +1,43 @@
-<h1>Burgers!</h1>
+<div class="jumbotron text-center my-2 bg-transparent font-rock">
+  <h2>Hungry?</h2>
+  <h2>Come and get some savory</h2>
+  <h1 class="font-weight-bold">Burgers!</h1>
+</div>
 
-<h2>Burgers that are not Devoured!</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/burger-block devoured=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>Burgers that are Devoured!</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burgers/burger-block devoured=false}}
-    {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add a burger</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="bu">burger Name:</label>
-    <input type="text" id="bu" name="name">
+<div class="row text-center">
+  <div class="col-lg-5">
+    <h2 class="font-italic text-black">Ready</h2>
+    <ul>
+      {{#each burgers}} {{#unless devoured}} {{> burgers/burger-block devoured=true}} {{/unless}} {{/each}}
+    </ul>
   </div>
 
-  <div class="form-group">
-    <label for="dev">Devoured</label><br>
-    <input type="radio" name="devoured" value="1" checked> Devoured<br>
-    <input type="radio" name="devoured" value="0"> In Stock
-  </div>
+  <div class="col-lg-5 offset-sm-2">
+    <h2 class="font-italic text-black">Ordered</h2>
 
-  <button type="submit">Add Burger</button>
-</form>
+    <ul class="list-group">
+      {{#each burgers}} {{#if devoured}} {{> burgers/burger-block devoured=false}} {{/if}} {{/each}}
+    </ul>
+  </div>
+</div>
+
+<div class="text-center my-3 py-2 burger-add">
+  <h2 class="font-italic text-black"><span class="bg-warning px-3">Have a new Idea!?</span></h2>
+  <h4 class="text-black font-italic"><span class="bg-orange px-3">Add a Burger!</span></h4>
+  <form class="create-form font-weight-bold">
+
+    <div class="form-group">
+      <label for="bu">Burger Name:</label>
+      <input type="text" id="bu" name="name">
+    </div>
+
+    <div class="form-group">
+      <span class="text-dark bg-light px-3"><input type="radio" name="devoured" value="1" checked> Devoured!</span>
+      <br>
+      <span class="text-dark bg-light px-3"><input type="radio" name="devoured" value="0"> Order Up!</span>
+    </div>
+
+    <button type="submit">Add Burger</button>
+
+  </form>
+</div>
